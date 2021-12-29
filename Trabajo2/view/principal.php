@@ -2,6 +2,16 @@
    <!-- Basic -->
    <head>
       <meta charset="utf-8">
+      <!-- Bootstrap CSS -->
+     
+      <!-- Site CSS -->
+      <link rel="stylesheet" href="libs/css/style.css" />
+      <link rel="stylesheet" href="libs/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="libs/css_listaestudiante.css" />
+      <link rel="stylesheet" href="libs/css_pages_estudio.css" />
+      
+
+
    </head>
    <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
@@ -26,6 +36,7 @@
                      <div class="full feature_box">
                          <div class="full icon">
                             <img class="default-block" src="libs/images/icon_1.png" alt="#" />
+                            <img class="default-none" src="libs/images/icon_1w.png" alt="#" />
                          </div>
                          <div class="full">
                            <a href = "?c=programa&a=Index"><h4>CREAR PROGRAMA</h4></a>
@@ -39,6 +50,7 @@
                      <div class="full feature_box">
                          <div class="full icon">
                            <img class="default-block" src="libs/images/icon_1.png" alt="#" />
+                           <img class="default-none" src="libs/images/icon_1w.png" alt="#" />
                          </div>
                          <div class="full">
                          <a href = "?c=materia&a=Index"><h4>CREAR MATERIAS</h4></a>
@@ -52,6 +64,8 @@
                      <div class="full feature_box">
                          <div class="full icon">
                            <img class="default-block" src="libs/images/icon_1.png" alt="#" />
+                           <img class="default-none" src="libs/images/icon_1w.png" alt="#" />
+                           <img class="default-none" src="libs/imagesdas_bg.png" alt="#" />
                          </div>
                          <div class="full">
                            <a href = "?c=estudiante&a=Index"><h4>REGISTRAR ESTUDIANTES</h4></a>
@@ -65,6 +79,7 @@
                      <div class="full feature_box">
                          <div class="full icon">
                            <img class="default-block" src="libs/images/icon_1.png" alt="#" />
+                           <img class="default-none" src="libs/images/icon_1w.png" alt="#" />
                          </div>
                          <div class="full">
                            <a href = "form_cursoestudiante.php"><h4>INSCRIPCIÓN DE ESTUDIANTES</h4></a>
@@ -78,6 +93,7 @@
                      <div class="full feature_box">
                          <div class="full icon">
                            <img class="default-block" src="libs/images/icon_1.png" alt="#" />
+                           <img class="default-none" src="libs/images/icon_1w.png" alt="#" />
                          </div>
                          <div class="full">
                            <a href = "?c=instructor&a=Index"><h4>REGISTRAR INSTRUCTORES</h4></a>

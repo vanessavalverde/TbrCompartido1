@@ -1,21 +1,21 @@
 <?php
 //Requiero el archivo de clase para extenderlo en este script
-require_once("persona.php");
+//require_once("persona.php");
 //Clase hija
-class instructor extends persona
+class instructor 
 {
+    private $pdo;
+    public $idInstructor;
+    public $Nombre;
+    public $Apellido;
+    public $Edad;
+    public $Genero;
     public $titulo;
 
     public function __CONSTRUCT()
     {
         try {
             $this->pdo = conexion::StartUp();
-            $this->id=0;
-            $this->Nombre = "";
-            $this->Apellido = "";
-            $this->Edad = "";
-            $this->Genero = "";
-            $this->idPrograma=0;
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -35,27 +35,27 @@ class instructor extends persona
         }
     }
 
-    public function Obtener($id)
+    public function Obtener($idInstructor)
     {
         try {
             $stm = $this->pdo
                 ->prepare("SELECT * FROM instructor WHERE idInstructor = ?");
 
 
-            $stm->execute(array($id));
+            $stm->execute(array($idInstructor));
             return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function Eliminar($id)
+    public function Eliminar($idInstructor)
     {
         try {
             $stm = $this->pdo
                 ->prepare("DELETE FROM instructor WHERE idInstructor = ?");
 
-            $stm->execute(array($id));
+            $stm->execute(array($idInstructor));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -80,7 +80,7 @@ class instructor extends persona
                         $data->Edad,
                         $data->Genero,
                         $data->titulo,
-                        $data->id
+                        $data->idInstructor
                     )
                 );
         } catch (Exception $e) {

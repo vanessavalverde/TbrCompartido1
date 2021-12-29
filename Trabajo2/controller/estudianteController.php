@@ -4,6 +4,7 @@ require_once 'model/estudiante.php';
 class estudianteController{
     
     private $model;
+   
     
     public function __CONSTRUCT(){
         $this->model = new estudiante();
@@ -17,8 +18,8 @@ class estudianteController{
     public function Crud(){
         $est = new estudiante();
         
-        if(isset($_REQUEST['id'])){
-            $est = $this->model->Obtener($_REQUEST['id']);
+        if(isset($_REQUEST['idEstudiante'])){
+            $est = $this->model->Obtener($_REQUEST['idEstudiante']);
         }
         
         require_once 'view/header.php';
@@ -28,14 +29,14 @@ class estudianteController{
     public function Guardar(){
         $est = new estudiante();
         
-        $est->id = $_REQUEST['id'];
-        $est->Nombre = $_REQUEST['nombre'];
-        $est->Apellido = $_REQUEST['apellido'];
-        $est->Edad = $_REQUEST['edad'];
-        $est->Genero = $_REQUEST['genero'];
+        $est->idEstudiante = $_REQUEST['idEstudiante'];
+        $est->Nombre = $_REQUEST['Nombre'];
+        $est->Apellido = $_REQUEST['Apellido'];
+        $est->Edad = $_REQUEST['Edad'];
+        $est->Genero = $_REQUEST['Genero'];
         $est->idPrograma = $_REQUEST['idPrograma'];
 
-        $est->id > 0 
+        $est->idEstudiante > 0 
             ? $this->model->Actualizar($est)
             : $this->model->Registrar($est);
         
@@ -43,7 +44,7 @@ class estudianteController{
     }
     
     public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['id']);
+        $this->model->Eliminar($_REQUEST['idEstudiante']);
         header('Location: index.php');
     }
 }

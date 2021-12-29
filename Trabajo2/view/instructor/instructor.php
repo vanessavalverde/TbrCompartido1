@@ -24,10 +24,10 @@
             <td><?php echo $r->Genero; ?></td>
             <td><?php echo $r->titulo; ?></td>
             <td>
-                <a href="?c=instructor&a=Crud&id=<?php echo $r->id; ?>">Editar</a>
+                <a href="?c=instructor&a=Crud&idInstructor=<?php echo $r->idInstructor; ?>">Editar</a>
             </td>
             <td>
-                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=instructor&a=Eliminar&id=<?php echo $r->id; ?>">Eliminar</a>
+                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=instructor&a=Eliminar&idInstructor=<?php echo $r->idInstructor; ?>">Eliminar</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -31,27 +31,27 @@ class materia
         }
     }
 
-    public function Obtener($id)
+    public function Obtener($idMateria)
     {
         try {
             $stm = $this->pdo
                 ->prepare("SELECT * FROM materia WHERE idMateria = ?");
 
 
-            $stm->execute(array($id));
+            $stm->execute(array($idMateria));
             return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function Eliminar($id)
+    public function Eliminar($idMateria)
     {
         try {
             $stm = $this->pdo
                 ->prepare("DELETE FROM materia WHERE idMateria = ?");
 
-            $stm->execute(array($id));
+            $stm->execute(array($idMateria));
         } catch (Exception $e) {
             die($e->getMessage());
         }

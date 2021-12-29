@@ -1,4 +1,5 @@
 <?php
+//Esta linea de codigo  haceun llamado adirectorio conexion.php 
 require_once 'model/conexion.php';
 
 $controller = 'principal';

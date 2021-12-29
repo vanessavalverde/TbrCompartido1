@@ -1,38 +1,38 @@
 <h1 class="page-header">
-    <?php echo $inst->id!= null ? $inst->Nombre : 'Nuevo Registro'; ?>
+    <?php echo $inst->idInstructor!= null ? $inst->Nombre : 'Nuevo Registro'; ?>
 </h1>
 
 <ol class="breadcrumb">
   <li><a href="?c=instructor">instructores</a></li>
-  <li class="active"><?php echo $inst->id != null ? $inst->Nombre : 'Nuevo Registro'; ?></li>
+  <li class="active"><?php echo $inst->idInstructor != null ? $inst->Nombre : 'Nuevo Registro'; ?></li>
 </ol>
 
-<form id="frm-instructor" action="?c=instructor&a=Guardar" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?php echo $inst->id; ?>" />
+<form idInstructor="frm-instructor" action="?c=instructor&a=Guardar" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="idInstructor" value="<?php echo $inst->idInstructor; ?>" />
     
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" name="nombre" value="<?php echo $inst->Nombre; ?>" class="form-control" placeholder="Ingrese su nombre" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Nombre" value="<?php echo $inst->Nombre; ?>" class="form-control" placeholder="Ingrese su nombre" data-validacion-tipo="requerido|min:10" />
     </div>
     
     <div class="form-group">
         <label>Apellido</label>
-        <input type="text" name="apellido" value="<?php echo $inst->Apellido; ?>" class="form-control" placeholder="Ingrese su apellido" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Apellido" value="<?php echo $inst->Apellido; ?>" class="form-control" placeholder="Ingrese su apellido" data-validacion-tipo="requerido|min:10" />
     </div>
 
     <div class="form-group">
         <label>Edad</label>
-        <input type="text" name="edad" value="<?php echo $inst->Edad; ?>" class="form-control" placeholder="Ingrese su edad" data-validacion-tipo="requerido|min:3" />
+        <input type="text" name="Edad" value="<?php echo $inst->Edad; ?>" class="form-control" placeholder="Ingrese su edad" data-validacion-tipo="requerido|min:3" />
     </div>
 
     <div class="form-group">
         <label>Genero</label>
-        <input type="text" name="genero" value="<?php echo $inst->Genero; ?>" class="form-control" placeholder="Ingrese su genero" data-validacion-tipo="requerido|min:1|max:2" />
+        <input type="text" name="Genero" value="<?php echo $inst->Genero; ?>" class="form-control" placeholder="Ingrese su genero" data-validacion-tipo="requerido|min:1|max:2" />
     </div>
     
     <div class="form-group">
-        <label>Id Programa</label>
-        <input type="text" name="titulo" value="<?php echo $inst->idPrograma; ?>" class="form-control" placeholder="Ingrese su titulo" data-validacion-tipo="requerido|min:20" />
+        <label>Titulo</label>
+        <input type="text" name="titulo" value="<?php echo $inst->titulo; ?>" class="form-control" placeholder="Ingrese su titulo" data-validacion-tipo="requerido|min:20" />
     </div>
         
     <hr />

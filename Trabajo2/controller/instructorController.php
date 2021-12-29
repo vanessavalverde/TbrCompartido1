@@ -17,8 +17,8 @@ class instructorController{
     public function Crud(){
         $inst = new instructor();
         
-        if(isset($_REQUEST['id'])){
-            $inst = $this->model->Obtener($_REQUEST['id']);
+        if(isset($_REQUEST['idInstructor'])){
+            $inst = $this->model->Obtener($_REQUEST['idInstructor']);
         }
         
         require_once 'view/header.php';
@@ -28,11 +28,11 @@ class instructorController{
     public function Guardar(){
         $inst = new instructor();
         
-        $inst->id = $_REQUEST['id'];
-        $inst->Nombre = $_REQUEST['nombre'];
-        $inst->Apellido = $_REQUEST['apellido'];
-        $inst->Edad = $_REQUEST['edad'];
-        $inst->Genero = $_REQUEST['genero'];
+        $inst->idInstructor = $_REQUEST['idInstructor'];
+        $inst->Nombre = $_REQUEST['Nombre'];
+        $inst->Apellido = $_REQUEST['Apellido'];
+        $inst->Edad = $_REQUEST['Edad'];
+        $inst->Genero = $_REQUEST['Genero'];
         $inst->titulo = $_REQUEST['titulo'];
 
         $inst->id > 0 
@@ -43,7 +43,7 @@ class instructorController{
     }
     
     public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['id']);
+        $this->model->Eliminar($_REQUEST['idInstructor']);
         header('Location: index.php');
     }
 }

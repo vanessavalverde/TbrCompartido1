@@ -20,10 +20,10 @@
             <td><?php echo $r->Semestre; ?></td>
             <td><?php echo $r->idPrograma; ?></td>
             <td>
-                <a href="?c=materia&a=Crud&id=<?php echo $r->idMateria; ?>">Editar</a>
+                <a href="?c=materia&a=Crud&idMateria=<?php echo $r->idMateria; ?>">Editar</a>
             </td>
             <td>
-                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=materia&a=Eliminar&id=<?php echo $r->idMateria; ?>">Eliminar</a>
+                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=materia&a=Eliminar&idMateria=<?php echo $r->idMateria; ?>">Eliminar</a>
             </td>
         </tr>
     <?php endforeach; ?>

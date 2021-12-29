@@ -1,21 +1,21 @@
 <?php
 //Requiero el archivo de clase para extenderlo en este script
-require_once("persona.php");
+//require_once("persona.php");
 //Clase hija
-class estudiante extends persona
+class estudiante 
 {
+    private $pdo;
+    public $idEstudiante;
+    public $Nombre;
+    public $Apellido;
+    public $Edad;
+    public $Genero;
     public $idPrograma;
 
     public function __CONSTRUCT()
     {
         try {
             $this->pdo = conexion::StartUp();
-            $this->id=0;
-            $this->Nombre = "";
-            $this->Apellido = "";
-            $this->Edad = "";
-            $this->Genero = "";
-            $this->idPrograma="";
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -35,27 +35,27 @@ class estudiante extends persona
         }
     }
 
-    public function Obtener($id)
+    public function Obtener($idEstudiante)
     {
         try {
             $stm = $this->pdo
-                ->prepare("SELECT * FROM estudiante WHERE idEstudiante = ?");
+                ->prepare("SELECT * FROM estudiante WHERE idEstudiante= ?");
 
 
-            $stm->execute(array($id));
+            $stm->execute(array($idEstudiante));
             return $stm->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function Eliminar($id)
+    public function Eliminar($idEstudiante)
     {
         try {
             $stm = $this->pdo
                 ->prepare("DELETE FROM estudiante WHERE idEstudiante = ?");
 
-            $stm->execute(array($id));
+            $stm->execute(array($idEstudiante));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -80,7 +80,7 @@ class estudiante extends persona
                         $data->Edad,
                         $data->Genero,
                         $data->idPrograma,
-                        $data->id
+                        $data->idEstudiante
                     )
                 );
         } catch (Exception $e) {

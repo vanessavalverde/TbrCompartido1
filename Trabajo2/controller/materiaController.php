@@ -17,8 +17,8 @@ class materiaController{
     public function Crud(){
         $mat = new materia();
         
-        if(isset($_REQUEST['id'])){
-            $mat = $this->model->Obtener($_REQUEST['id']);
+        if(isset($_REQUEST['idMateria'])){
+            $mat = $this->model->Obtener($_REQUEST['idMateria']);
         }
         
         require_once 'view/header.php';
@@ -28,7 +28,7 @@ class materiaController{
     public function Guardar(){
         $mat = new materia();
         
-        $mat->idMateria = $_REQUEST['id'];
+        $mat->idMateria = $_REQUEST['idMateria'];
         $mat->Materia = $_REQUEST['Materia'];
         $mat->Semestre = $_REQUEST['Semestre'];
         $mat->idPrograma = $_REQUEST['idPrograma'];
@@ -41,7 +41,7 @@ class materiaController{
     }
     
     public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['id']);
+        $this->model->Eliminar($_REQUEST['idMateria']);
         header('Location: index.php');
     }
 }

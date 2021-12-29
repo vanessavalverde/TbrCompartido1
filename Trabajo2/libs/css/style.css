@@ -220,7 +220,7 @@ button:focus {
 	animation-delay: 0s;
 	animation-delay: 0s;
 	animation-delay: 0s;
-	background-image: url('../images/gb.png');
+	background-image: url('libs/images/gb.png');
 	background-size: 100% 100%;
 }
 
@@ -379,7 +379,7 @@ a:hover,a:focus {
 
     width: 92px;
     height: 30px;
-    background: url('../images/das_bg.png');
+    background: url('libs/images/das_bg.png');
     content: "";
     display: block;
     position: absolute;
@@ -393,7 +393,7 @@ a:hover,a:focus {
 
 	width: 92px;
     height: 30px;
-    background: url('../images/das_bg.png');
+    background: url('libs/images/das_bg.png');
     content: "";
     display: block;
     position: absolute;
@@ -933,7 +933,7 @@ button#sidebarCollapse {
 	left: -100%;
 	width: 200%;
 	height: 100%;
-	background: url(../images/wave.svg) repeat-x center center;
+	background: url(libs/images/wave.svg) repeat-x center center;
 	background-size: 50% auto;
 }
 
@@ -1032,7 +1032,7 @@ button#sidebarCollapse {
 }
 
 .about_bg {
-    background-image: url('../images/about_bg.png');
+    background-image: url('libs/images/about_bg.png');
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -2939,7 +2939,7 @@ a.readmore_bt::after {
     content: "";
     width: 185px;
     height: 15px;
-    background: url('../images/or.png');
+    background: url('libs/images/or.png');
     display: block;
     position: absolute;
     top: -15px;
@@ -2963,17 +2963,17 @@ footer.footer-box .heading_main h2 {
 }
 
 .f_icon_1 {
-    background-image: url('../images/f_icon1.png');
+    background-image: url('libs/images/f_icon1.png');
     background-repeat: no-repeat;
 }
 
 .f_icon_2 {
-    background-image: url('../images/f_icon2.png');
+    background-image: url('libs/images/f_icon2.png');
     background-repeat: no-repeat;
 }
 
 .f_icon_3 {
-    background-image: url('../images/f_icon3.png');
+    background-image: url('libs/images/f_icon3.png');
     background-repeat: no-repeat;
 }
 

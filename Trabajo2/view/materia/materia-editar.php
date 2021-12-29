@@ -8,21 +8,21 @@
 </ol>
 
 <form id="frm-materia" action="?c=materia&a=Guardar" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?php echo $mat->idMateria; ?>" />
+    <input type="hidden" name="idMateria" value="<?php echo $mat->idMateria; ?>" />
     
     <div class="form-group">
         <label>Materia</label>
-        <input type="text" name="Materia" value="<?php echo $mat->Materia; ?>" class="form-control" placeholder="Ingrese su nombre" data-validacion-tipo="requerido|min:3" />
+        <input type="text" name="Materia" value="<?php echo $mat->Materia; ?>" class="form-control" placeholder="Ingrese nombre de materia" data-validacion-tipo="requerido|min:3" />
     </div>
     
     <div class="form-group">
         <label>Semestre</label>
-        <input type="text" name="Semestre" value="<?php echo $mat->Semestre; ?>" class="form-control" placeholder="Ingrese su apellido" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Semestre" value="<?php echo $mat->Semestre; ?>" class="form-control" placeholder="Ingrese semestres" data-validacion-tipo="requerido|min:10" />
     </div>
     
     <div class="form-group">
         <label>Id Programa</label>
-        <input type="text" name="idPrograma" value="<?php echo $mat->idPrograma; ?>" class="form-control" placeholder="Ingrese su correo electrónico" data-validacion-tipo="requerido|email" />
+        <input type="text" name="idPrograma" value="<?php echo $mat->idPrograma; ?>" class="form-control" placeholder="Código deprograma" data-validacion-tipo="requerido|email" />
     </div>
         
     <hr />
